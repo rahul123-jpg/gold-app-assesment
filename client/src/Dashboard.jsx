@@ -14,7 +14,7 @@ export default function Dashboard() {
   const addScore = async () => {
     if (!score) return;
 
-    const res = await axios.post("http://localhost:5000/add-score", {
+    const res = await axios.post("https://gold-app-assesment.onrender.com/add-score", {
       userId,
       value: score,
       date: new Date().toLocaleDateString(),
@@ -25,12 +25,12 @@ export default function Dashboard() {
   };
 
   const getScores = async () => {
-    const res = await axios.get(`http://localhost:5000/scores/${userId}`);
+    const res = await axios.get(`https://gold-app-assesment.onrender.com/scores/${userId}`);
     setScores(res.data);
   };
 
   const runDraw = async () => {
-    const res = await axios.get("http://localhost:5000/draw");
+    const res = await axios.get("https://gold-app-assesment.onrender.com/draw");
     setDraw(res.data);
 
     let userScores = scores.map((s) => Number(s.value));
@@ -44,7 +44,7 @@ export default function Dashboard() {
 
 
   const getUser = async ()=>{
-    const res = await axios.get(`http://localhost:5000/user/${userId}`);
+    const res = await axios.get(`https://gold-app-assesment.onrender.com/user/${userId}`);
     setUser(res.data);
 };
 

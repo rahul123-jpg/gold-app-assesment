@@ -6,7 +6,7 @@ function Admin() {
     const [users, setUsers] = useState([]);
 
     const getUsers = async () => {
-        const res = await axios.get("http://localhost:5000/all-users");
+        const res = await axios.get("https://gold-app-assesment.onrender.com/all-users");
         setUsers(res.data);
         
     };

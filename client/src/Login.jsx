@@ -18,7 +18,7 @@ function Login() {
   }
     try {
       setLoading(true)
-      const res = await axios.post("http://localhost:5000/login", {
+      const res = await axios.post("https://gold-app-assesment.onrender.com/login", {
         email,
         password,
       });

@@ -37,7 +37,7 @@ function Signup() {
     return;
   }
     try {
-      const res = await axios.post("http://localhost:5000/signup", {
+      const res = await axios.post("https://gold-app-assesment.onrender.com/signup", {
         name,
         email,
         password,
